@@ -5,12 +5,15 @@ import java.util.List;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
+import com.erp.customerservice.config.GlobalConfig;
 import com.erp.customerservice.entities.Customer;
 import com.erp.customerservice.repositories.CustomerRepository;
 
 @SpringBootApplication
+@EnableConfigurationProperties(GlobalConfig.class)
 public class CustomerServiceApplication {
 
 	public static void main(String[] args) {
