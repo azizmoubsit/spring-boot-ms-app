@@ -72,3 +72,10 @@ services:
     depends_on:
       erp-account-service:
         condition: service_healthy
+  erp-front:
+    build: ./erp-front
+    container_name: erp-front
+    ports:
+      - 81:80
+    expose:
+      - 81
